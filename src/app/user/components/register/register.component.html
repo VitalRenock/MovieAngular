@@ -1,0 +1,27 @@
+<p>S'enregistrer</p>
+
+<!-- Création du formulaire et binding avec le formulaire coté TS -->
+<form [formGroup]="userFG" (ngSubmit)="register()">
+    <nb-card>
+        <nb-card-header>Enregistrement:</nb-card-header>
+        <nb-card-body ngClass="forms">
+            <label for="">email: </label>
+            <input nbInput type="text" formControlName="emailControl">
+            <!-- <br> -->
+            <label for="">password: </label>
+            <input nbInput type="password" formControlName="passwordControl">
+            <!-- <br> -->
+            <label for="">Firstname: </label>
+            <input nbInput type="text" formControlName="firstNameControl">
+            <!-- <br> -->
+            <label for="">Lastname: </label>
+            <input nbInput type="text" formControlName="lastNameControl">
+            <!-- <br> -->
+            <label for="">Birthdate: </label>
+            <input nbInput type="date" formControlName="birthDayControl">
+        </nb-card-body>
+        <nb-card-footer>
+            <button nbButton type="submit">Envoyer</button>
+        </nb-card-footer>
+    </nb-card>
+</form>

@@ -1,0 +1,14 @@
+<!-- Affichage de la liste de films dans une 'Card' -->
+<nb-card status="basic" accent="warning" size="giant">
+    <nb-card-header>
+        <h2>Liste de films</h2>
+        <button ngButton *ngIf="user.isAdmin" (click)="add()">Add</button>
+    </nb-card-header>
+    <nb-card-body>
+        <nb-list>
+            <nb-list-item *ngFor="let m of list; let i = index">
+                <strong><a class="moviesList" [routerLink]="['../details/' + m.id]">{{m.title}}</a></strong>
+            </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+</nb-card>

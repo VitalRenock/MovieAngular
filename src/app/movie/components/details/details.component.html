@@ -1,0 +1,35 @@
+<nb-card status="basic" accent="warning" size="giant">
+    <nb-card-header>
+        <h2>{{movie.title}}</h2>
+        
+    </nb-card-header>
+    <nb-card-body>
+        <nb-list>
+            <nb-list-item><strong>Description: </strong>{{movie.description}}</nb-list-item>
+            <nb-list-item><strong>Date de sortie: </strong>{{movie.releaseYear}}</nb-list-item>
+            <nb-list-item>
+                {{movie.realisator ? movie.realisator.lastName : ""}}
+                &nbsp;
+                {{movie.realisator ? movie.realisator.firstName : ""}}
+            </nb-list-item>
+            <nb-list-item>
+                {{movie.scenarist ? movie.scenarist.lastName : ""}}
+                &nbsp;
+                {{movie.scenarist ? movie.scenarist.firstName : ""}}
+            </nb-list-item>
+            <nb-list-item>
+                <nb-card status="basic" accent="warning" size="medium">
+                    <nb-card-header>
+                        <h4>Liste des acteurs</h4>
+                    </nb-card-header>
+                    <nb-card-body>
+                        <nb-list-item *ngFor="let a of actorList">
+                            {{a.firstName != undefined ? a.firstName : ""}}
+                            {{a.lastName != undefined ? a.lastName : ""}}
+                        </nb-list-item>
+                    </nb-card-body>
+                </nb-card>
+            </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+</nb-card>

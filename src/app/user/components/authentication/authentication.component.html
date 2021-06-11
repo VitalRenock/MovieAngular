@@ -1,0 +1,21 @@
+<p>Connexion</p>
+
+<!-- Création du formulaire et binding avec le formulaire coté TS -->
+<form [formGroup]="userFG" (ngSubmit)="authentication()">
+    <nb-card>
+        <nb-card-header>Connexion:</nb-card-header>
+        <nb-card-body>
+            <label for="">email: </label>
+            <input nbInput type="text" formControlName="emailControl">
+            <br>
+            <label for="">password: </label>
+            <input nbInput type="password" formControlName="passwordControl">
+        </nb-card-body>
+        <nb-card-footer>
+            <button nbButton type="submit">Envoyer</button>
+        </nb-card-footer>
+    </nb-card>
+</form>
+
+
+
