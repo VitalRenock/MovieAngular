@@ -16,6 +16,7 @@ export class UserService {
   }
   tokenSubject : Subject<boolean> = new Subject<boolean>()
 
+  // Sauvegarde du nouveau User apèrs Authentification
   user: User = { email: "", password:"" }
 
   constructor(

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbListModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbListModule, NbSelectModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
@@ -21,7 +21,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbCardModule,
     NbInputModule,
     NbButtonModule,
-    NbListModule
+    NbListModule,
+    NbSelectModule
   ],
   exports: [
     FormsModule,
@@ -32,7 +33,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbCardModule,
     NbInputModule,
     NbButtonModule,
-    NbListModule
+    NbListModule,
+    NbSelectModule
   ]
 })
 export class SharedModule { }

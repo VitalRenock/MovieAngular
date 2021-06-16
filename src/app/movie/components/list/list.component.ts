@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Movie } from 'src/app/shared/models/movie';
 import { User } from 'src/app/shared/models/user';
@@ -21,8 +22,8 @@ export class ListComponent implements OnInit {
   constructor(
     // On déclare un nouveau service Movie
     private service: MovieService,
-
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -41,7 +42,7 @@ export class ListComponent implements OnInit {
   }
 
   add() {
-    // Redirection
+    this.router.navigate(['movie/addmovie'])
   }
 
 }

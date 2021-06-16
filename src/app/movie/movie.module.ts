@@ -5,12 +5,14 @@ import { MovieRoutingModule } from './movie-routing.module';
 import { ListComponent } from './components/list/list.component';
 import { SharedModule } from '../shared/shared.module';
 import { DetailsComponent } from './components/details/details.component';
+import { AddMovieComponent } from './components/add-movie/add-movie.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    DetailsComponent
+    DetailsComponent,
+    AddMovieComponent
   ],
   imports: [
     CommonModule,

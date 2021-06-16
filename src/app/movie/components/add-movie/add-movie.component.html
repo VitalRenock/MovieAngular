@@ -1,0 +1,46 @@
+<h2>Ajouter un film</h2>
+
+<nb-card>
+<!-- Création du formulaire et binding avec le formulaire coté TS -->
+<form [formGroup]="formGroup">
+    <nb-card>
+        <nb-card-header>Ajout de film:</nb-card-header>
+        <nb-card-body ngClass="forms">
+
+            <label for="">title: </label>
+            <input nbInput type="text" formControlName="title">
+            <!-- <br> -->
+
+            <label for="">description: </label>
+            <input nbInput type="text" formControlName="description">
+            <!-- <br> -->
+
+            <label for="">releaseYear: </label>
+            <input nbInput type="text" formControlName="releaseYear">
+            <!-- <br> -->
+
+            <label for="">realisator: </label>
+            <input nbInput type="text" formControlName="realisator">
+            <nb-select formControlName="realisator">
+                <nb-option *ngFor="let p of listPerson" value="{{p.id}}">{{p.lastName}} {{p.firstName}}</nb-option>
+            </nb-select>
+            <!-- <br> -->
+
+            <label for="">scenarist: </label>
+            <nb-select formControlName="scenarist">
+                <nb-option *ngFor="let p of listPerson" value="{{p.id}}">{{p.lastName}} {{p.firstName}}</nb-option>
+            </nb-select>
+
+            <button (click)="addActor()">Add</button>
+            <label for="">actors: </label>
+            <nb-select formArrayName="actors">
+                <nb-option *ngFor="let a of getActors().controls, let i = index">test {{i}}</nb-option>
+            </nb-select>
+
+        </nb-card-body>
+        <nb-card-footer>
+            <button nbButton type="submit">Envoyer</button>
+        </nb-card-footer>
+    </nb-card>
+</form>
+</nb-card>
